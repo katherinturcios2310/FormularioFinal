@@ -8,21 +8,26 @@
 <body>
             <form  method="post" class="row g-3">
                 {% csrf_token %}
-              <div class="col-md-4"  >
+              <div class="col-sm-12 row"  >
                 <label for="inputEmail4" class="form-label"><font face="Princess Sofia" size="30" class="text-dark">Nombre</font></label>
                 <input alt=" " name="nombre" value="{{empleado.nombre}}" type="text" class="form-control" id="inputEmail4">
               </div>
-              <div class="col-4">
+              <div class="col-sm-12 row" >
                 <label for="inputAddress" class="form-label"><font face="Princess Sofia" size="30" class="text-dark">Apellido</font></label>
                 <input name="apellido" value="{{empleado.apellido}}" type="text" class="form-control" id="inputAddress" >
               </div>
-                <div class="col-4">
+                <div class="col-sm-12 row" >
                 <label for="inputAddress" class="form-label"><font face="Princess Sofia" size="30" class="text-dark">Equipo de Computo</font></label>
                 <input name="computo" value="{{empleado.computo}}" type="text" class="form-control" id="inputAddress" >
               </div>
+
+                <br>
+              <div class="col-sm-12 row">
+                  <br>
               <br>
-              <br>
-              <div class="col">
+                  <div>
+
+                  </div>
                 <button align="center" type="submit" class="btn btn-secondary btn-lg btn-block"><font face="Princess Sofia" size="5" class="">Registrarse</font></button>
               </div>
             </form>
