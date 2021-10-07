@@ -3,7 +3,7 @@ from .models import tabla
 
 def index(request):
     if request.method == "POST":
-        print(request.POST.get('nombre') + ' ' + request.POST.get('apellido'))
+        print(request.POST.get('nombre') + ' ' + request.POST.get('apellido') + ' ' + request.POST.get('computo'))
         _empleado = tabla(nombre=request.POST.get('nombre'),
                           apellido=request.POST.get('apellido'),
                           computo=request.POST.get('computo'))
@@ -23,7 +23,7 @@ def updateEmpleado(request, pk_tabla):
     if request.method == "POST":
         _empleado.nombre = request.POST.get('nombre')
         _empleado.apellido = request.POST.get('apellido')
-        _empleado.apellido = request.POST.get('computo')
+        _empleado.computo = request.POST.get('computo')
         _empleado.save()
         return redirect('Formulario:table')
     return render(request, 'index.html', {'empleado':_empleado})
